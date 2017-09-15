@@ -25,7 +25,7 @@ public class FeedService
                     .setQueryParameter("output", "rss")
                     .get();
 
-            Document feedResponse = responsePromise.thenApply(WSResponse::asXml).toCompletableFuture().get();//text in htmml is called document in XML
+            Document feedResponse = responsePromise.thenApply(WSResponse::asXml ).toCompletableFuture().get();//text in htmml is called document in XML
 
             Node item = feedResponse.getFirstChild().getFirstChild().getChildNodes().item(9);
 

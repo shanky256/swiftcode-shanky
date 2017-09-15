@@ -18,7 +18,7 @@ public class HomeController extends Controller {
      */
     public Result index()
     {
-        return ok(3 + 2 + 1 + " Hello World! " + 3 + 2);
+        return ok(views.html.index.render());
     }
 
 }
